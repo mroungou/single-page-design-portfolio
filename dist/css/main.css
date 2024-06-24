@@ -18,10 +18,11 @@ body {
   border-radius: 28px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1.25rem 1rem;
-  margin: auto 0;
+  padding: 0.85rem 0.8rem;
+  margin: auto 0 auto auto;
   text-align: center;
   background-color: rgb(3, 3, 3);
+  width: 71%;
 }
 
 .ad {
@@ -130,8 +131,8 @@ body {
   border-radius: 28px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1.25rem 1rem;
-  margin: auto 0;
+  padding: 0.85rem 0.8rem;
+  margin: auto 0 auto auto;
   text-align: center;
   background-color: rgb(235, 117, 101);
   font-size: 0.875rem;
@@ -173,14 +174,14 @@ body {
   border-radius: 28px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1.25rem 1rem;
-  margin: auto 0;
+  padding: 0.85rem 0.8rem;
+  margin: auto 0 auto auto;
   text-align: center;
   font-size: 0.875rem;
   background-color: rgb(235, 117, 101);
   margin: auto;
   margin-top: 2.5rem;
-  width: 60%;
+  width: 50%;
 }
 
 .slide-show {
@@ -188,10 +189,12 @@ body {
   grid-template-columns: repeat(5, auto);
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
-  overflow-x: auto;
+  overflow-x: hidden;
+  transition: transform 0.5s ease;
 }
 .slide-show .demo {
   transition: transform 0.5s ease;
+  flex: 0 0 100%;
 }
 .slide-show .demo img {
   border-radius: 15px;
@@ -232,8 +235,207 @@ body {
   border-radius: 28px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1.25rem 1rem;
-  margin: auto 0;
+  padding: 0.85rem 0.8rem;
+  margin: auto 0 auto auto;
   text-align: center;
   background-color: rgb(3, 3, 3);
+  width: 71%;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+  .header .btn-consult {
+    width: 50%;
+    padding: 1.15rem 0.8rem;
+  }
+  .ad h1 {
+    font-size: 2.75rem;
+  }
+  .ad p {
+    font-size: 1.125rem;
+    padding: 0 4rem;
+  }
+  .services {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    padding: 0 2rem;
+  }
+  .services .graphic-design {
+    grid-row: 1/3;
+  }
+  .services .ui-ux {
+    grid-row: 1/2;
+    grid-column: 3;
+  }
+  .services .illustrations {
+    grid-column: 3/-1;
+  }
+  .services .graphics {
+    grid-column: 3/-1;
+  }
+  .about-amy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    padding: 4rem 2rem;
+    text-align: left;
+    position: relative;
+  }
+  .about-amy .amy-pic img {
+    padding: 0;
+    position: absolute;
+    width: 364px;
+    left: -42px;
+  }
+  .about-amy h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .about-amy p {
+    font-size: 1.125rem;
+  }
+  .about-amy .btn-consult {
+    margin: auto auto auto 0;
+    margin-top: 2rem;
+    width: 55%;
+    padding: 1.125rem;
+  }
+  .slide-show .demo img {
+    width: 540px;
+    height: 360px;
+  }
+  .contact {
+    margin: 1rem 2rem;
+    padding: 2rem 5rem 4rem;
+  }
+  .contact h4 {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+  .contact p {
+    font-size: 1.125rem;
+  }
+  .contact .btn-consult {
+    padding: 1.2rem 0;
+    width: 42%;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .footer .btn-consult {
+    padding: 1.2rem 0;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 2rem 8rem;
+  }
+  .header .btn-consult:hover {
+    cursor: pointer;
+    background-color: rgb(117, 92, 222);
+  }
+  .ad h1 {
+    font-size: 3.5rem;
+  }
+  .ad p {
+    padding: 0 22rem;
+  }
+  .services {
+    padding: 4rem 8rem;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .services h5 {
+    font-size: 1.5rem;
+  }
+  .services .illustrations {
+    grid-column: 3/5;
+  }
+  .services .photo {
+    grid-column: 5/-1;
+    grid-row: 1;
+  }
+  .services .graphics {
+    grid-column: 5/-1;
+  }
+  .about-amy {
+    padding: 1.25rem 8rem;
+  }
+  .about-amy .amy-pic img {
+    position: sticky;
+    width: 445px;
+  }
+  .about-amy h2 {
+    font-size: 2.5rem;
+    padding-right: 2rem;
+  }
+  .about-amy p {
+    padding-right: 2rem;
+  }
+  .about-amy .about {
+    margin: auto;
+  }
+  .about-amy .btn-consult {
+    padding: 1.2rem;
+    width: 35%;
+  }
+  .about-amy .btn-consult:hover {
+    background-color: rgb(246, 165, 96);
+    cursor: pointer;
+  }
+  .work h3 {
+    font-size: 2rem;
+  }
+  .slide-show {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .slide-show .demo img {
+    width: 540px;
+    height: 360px;
+  }
+  .control:hover {
+    background-color: rgb(117, 92, 222);
+    cursor: pointer;
+  }
+  .contact {
+    margin: 2rem 8rem;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 6rem 2rem;
+  }
+  .contact h4 {
+    font-size: 2.5rem;
+    margin: auto 0;
+  }
+  .contact p {
+    font-size: 1.125rem;
+    line-height: 150%;
+  }
+  .contact .text {
+    padding: 0 6rem;
+  }
+  .contact .btn-consult {
+    margin: auto;
+    width: 70%;
+  }
+  .contact .btn-consult:hover {
+    cursor: pointer;
+    background-color: rgb(246, 165, 96);
+  }
+  .footer {
+    padding: 2rem 8rem;
+  }
+  .footer .btn-consult {
+    padding: 1.25rem 1rem;
+    width: 40%;
+  }
+  .footer .btn-consult:hover {
+    background-color: rgb(117, 92, 222);
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=main.css.map */
